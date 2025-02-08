@@ -1,0 +1,135 @@
+
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+
+	--cocoa-brown: #d4783eff;
+	/* --pumpkin: rgb(240, 145, 86); */
+	--pumpkin: rgb(240, 145, 86);
+	--pumpkin-2: rgb(240, 163, 116);
+	--russet: #8c522dff;
+	--eerie-black: #201f1eff;
+	--jet: #403b3bff;
+	--silver: #b8b3b1ff;
+	/* --timberwolf: rgb(247, 241, 238); */
+	--timberwolf: #f1f1f1;
+	--timberwolf-2: #fcfcfc;
+
+	--primary-color: var(--pumpkin);
+	--primary-color-hover: var(--pumpkin-2);
+	--primary-color-opacity:  #f4803787;
+
+	--secondary-color: rgb(86, 125, 240);
+
+	--border-radius: 6px;
+	--border-color: var(--silver);
+	--border-color-hover: var(--timberwolf);
+	--input-background: var(--timberwolf);
+	--input-background-hover: var(--timberwolf-2);
+	--button-background: var(--timberwolf);
+	--button-background-hover: var(--timberwolf-2);
+	--text-color: var(--eerie-black);
+
+	--card-background: transparent;
+	color: var(--text-color)
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary-color);
+	font-size: 14px;
+	transition: text-decoration .3s;
+	width: fit-content;
+}
+
+@media (max-width: 868px) {
+	.desktop {
+		display: none;
+	}
+}
+
+@media (min-width: 868px) {
+	.mobile {
+		display: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+
+body {
+  margin: 0;
+
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.page{
+	overflow-y: auto;
+}
+
+.page-frame{
+	height: 100dvh;
+	width: 100dvw;
+	background: var(--alabaster);
+	
+	box-sizing: border-box;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-top: 24px;
+	overflow-y: auto;
+	position: relative;
+}
+
+.page-frame__content{
+	box-sizing: border-box;
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	border-radius: 4px;
+	
+}
+
+.page-frame > * {
+	max-width: 926px;
+}
+
+@media (min-width: 1326px) {
+	.page-frame{
+		padding: 0;
+		padding-top: 24px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.page-frame > * {
+		width: 926px;
+	}
+}
+
+@media (max-width: 868px){
+	.page-frame{
+		padding: 0 16px;
+	}
+	.page-frame__content{
+		padding-top: 16px;
+	}
+}
+
+input{
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+  
+
+h1, h2, h3, h4, h5, h6{
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	margin: 0;
+}

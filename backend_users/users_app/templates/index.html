@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>TITLE</title>
+    </head>
+    <body>
+
+        <h1>USERS</h1>
+        <h2>Registration form</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Register</button>
+        </form>
+        {% if messages %}
+        	{% for message in messages %}
+          	<div class="alert alert-{{ message.tags }}">
+            	{{ message }}
+          	</div>
+        	{% endfor %}
+
+        {% if user.is_authenticated %}
+            <p>Hello, {{ user.username }} | <a href="{% url 'logout' %}">Exit</a> | <a href="{% url 'profile' %}">Profile</a></p>
+        {% else %}
+            <a href="{% url 'login' %}">Log in</a> | <a href="{% url 'register' %}">Register</a>
+        {% endif %}
+        {% endif %}
+
+    </body>
+</html>

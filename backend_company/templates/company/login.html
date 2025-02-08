@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<title>Login</title>
+</head>
+<body>
+	<div>
+		<div class="registartion">
+			<h2>Login</h2>
+			<form method="post">
+				{% csrf_token %}
+				{{ form.name }} <br>
+				{{ form.password }} <br>
+				<span>{{ error }}</span>
+				<button type="submit" name="action" value="log in">Login</button>
+			</form>
+		</div>
+		<div class="redirect">
+			<h2>Don't have an account yet?</h2>
+			<button type="submit" name="action" value="sign up">Sign up</button>
+		</div>
+	</div>
+</body>
+</html>

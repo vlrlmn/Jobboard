@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend_company:
+    build:
+      context: ./backend_company
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    container_name: backend_company
+    networks:
+      - web_network
+
+  backend_user:
+    build:
+      context: ./backend_users
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    container_name: backend_user
+    networks:
+      - web_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: frontend
+    networks:
+      - web_network
+
+networks:
+  web_network:
+    driver: bridge
