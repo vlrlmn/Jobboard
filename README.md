@@ -29,9 +29,6 @@ After starting the project, go to localhost:3000 in your browser to test and exp
 This project helps young professionals take their first steps in the job market by providing a platform to connect with potential employers.
 
 
-2/2
-
-
 
 
 
